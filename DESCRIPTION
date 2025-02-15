@@ -1,7 +1,7 @@
 Package: ForestClassR
 Title: R Interface for Forest Scene Segmentation
 Version: 0.1.0
-Authors@R: person("Lucas", "Bielak", email = "lbielakrezende@gmail.com", role = c("aut", "cre"))
+Authors@R: person("Lucas", "Bielak", email = "lucasbielakr@gmail.com", role = c("aut", "cre"))
 Description: Provides R interface for the Forest Scene Segmentation toolkit.
     Includes functions for environment setup and point cloud segmentation.
 License: GPL3

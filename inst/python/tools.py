@@ -12,9 +12,16 @@ from copy import deepcopy
 from multiprocessing import get_context
 from scipy import spatial
 
+import subprocess
 
+# Get the R package installation path
+                          
 def get_fsct_path(location_in_fsct=""):
-    current_working_dir = os.getcwd()
+    package_name = "ForestClassR"
+    cmd = f'Rscript -e "cat(system.file(package=\'{package_name}\'))"'
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    package_path = result.stdout.strip()
+    current_working_dir = package_path +"/python"
     print(current_working_dir)
     output_path = current_working_dir
     print(output_path)

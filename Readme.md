@@ -1,0 +1,67 @@
+# ForestClassR
+
+## Overview
+`ForestClassR` is an R package designed for incorporating forest scene classification of LiDAR data in R environment. 
+
+## Installation
+To install `ForestClassR`, use the following commands:
+
+```r
+#install.packages("remotes")
+library(remotes)
+install_github("lucasbielak/ForestClassR")
+library(ForestClassR)
+```
+
+To set up python enviroment:
+```r
+setup_env()
+```
+
+## Usage example
+### Load and Visualize a LAS File
+```r
+library(lidR)
+
+# Load the LAS file
+las <- readLAS(system.file("extdata", "sample.las", package = "ForestClassR"))
+
+# Plot the LAS file
+plot(las)
+```
+
+### Noise Classification and Removal
+```r
+# Filter noise using statistical outlier removal (SOR)
+las_class <- classify_noise(las, sor(k = 50, m = 3, quantile = FALSE))
+
+# Remove outliers using filter_poi()
+las_denoise <- filter_poi(las_class, Classification != LASNOISE)
+
+# Plot the denoised LAS file
+plot(las_denoise)
+```
+
+### Segmentation
+```r
+# Segment the denoised LAS file
+segmented <- run_fsct(las_denoise)
+
+# Plot the segmented point cloud
+plot(segmented, color = "label")
+```
+<div align="center"> <img src="readme_img/segment_gif.gif" width="300"> </div>
+
+## References
+
+Krisanski, S.; Taskhiri, M.S.; Gonzalez Aracil, S.; Herries, D.; Muneri, A.; Gurung, M.B.; Montgomery, J.; Turner, P. Forest Structural Complexity Tool—An Open Source, Fully-Automated Tool for Measuring Forest Point Clouds. Remote Sens. 2021, 13, 4677. https://doi.org/10.3390/rs13224677
+
+GitHub Repository: https://github.com/SKrisanski/FSCT/tree/main
+
+## License
+This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
+
+## Author
+Developed by Lucas Bielak
+
+
