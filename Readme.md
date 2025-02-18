@@ -48,7 +48,8 @@ plot(las_denoise)
 segmented <- run_fsct(las_denoise)
 
 # Plot the segmented point cloud
-plot(segmented, color = "label")
+custom_colors <- c("#5C4033", "#228B22","#a14023","#8B4513")
+plot(segmented, color = "label", pal = custom_colors,bg = "darkgray")
 ```
 <div align="center"> <img src="readme_img/segment_gif.gif" width="300"> </div>
 
