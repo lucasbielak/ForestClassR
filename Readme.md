@@ -53,6 +53,17 @@ plot(segmented, color = "label", pal = custom_colors,bg = "darkgray")
 ```
 <div align="center"> <img src="readme_img/segment_gif.gif" width="300"> </div>
 
+## Train RF with geometric features
+
+## Running an Example
+
+To open an example script from the package, use:
+
+```r
+open_example("RF_example")
+```
+<div align="center"> <img src="readme_img/features_jak.png" width="500"> </div>
+
 ## References
 
 Krisanski, S.; Taskhiri, M.S.; Gonzalez Aracil, S.; Herries, D.; Muneri, A.; Gurung, M.B.; Montgomery, J.; Turner, P. Forest Structural Complexity Tool—An Open Source, Fully-Automated Tool for Measuring Forest Point Clouds. Remote Sens. 2021, 13, 4677. https://doi.org/10.3390/rs13224677
