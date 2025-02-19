@@ -55,11 +55,13 @@ plot(segmented, color = "label", pal = custom_colors,bg = "darkgray")
 
 ## Train RF with geometric features
 
-## Running an Example
-
 To open an example script from the package, use:
 
 ```r
+library(remotes)
+install_github("lucasbielak/ForestClassR")
+library(ForestClassR)
+
 open_example("RF_example")
 ```
 <div align="center"> <img src="readme_img/features_jak.png" width="500"> </div>
@@ -68,7 +70,9 @@ open_example("RF_example")
 
 Krisanski, S.; Taskhiri, M.S.; Gonzalez Aracil, S.; Herries, D.; Muneri, A.; Gurung, M.B.; Montgomery, J.; Turner, P. Forest Structural Complexity Tool—An Open Source, Fully-Automated Tool for Measuring Forest Point Clouds. Remote Sens. 2021, 13, 4677. https://doi.org/10.3390/rs13224677
 
-GitHub Repository: https://github.com/SKrisanski/FSCT/tree/main
+GitHub Repository: https://github.com/SKrisanski/FSCT
+
+jakteristics : https://github.com/jakarto3d/jakteristics
 
 ## License
 This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
