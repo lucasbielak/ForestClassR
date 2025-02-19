@@ -7,10 +7,6 @@ setup_env <- function(envname = "ForestClassR", python_version = "3.9", force = 
     install.packages("lidR")
   }
 
-  # Load required packages
-  library(reticulate)
-  library(lidR)
-
   # Function to check Python version
   check_python_version <- function(python_path, required_version) {
     if (!file.exists(python_path)) {

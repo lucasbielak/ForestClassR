@@ -1,5 +1,4 @@
 extract_jak <- function(las_data) {
-  library(data.table)
   features <- data.table(
     eigenvalue_sum = las_data@data$eigenvalue_sum,
     omnivariance = las_data@data$omnivariance,
