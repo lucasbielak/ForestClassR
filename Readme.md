@@ -64,7 +64,7 @@ library(ForestClassR)
 
 open_example("RF_example")
 ```
-<div align="center"> <img src="readme_img/features_jak.png" width="500"> </div>
+<div align="center"> <img src="readme_img/features.png" width="500"> </div>
 
 ## References
 
