@@ -62,7 +62,10 @@ library(remotes)
 install_github("lucasbielak/ForestClassR")
 library(ForestClassR)
 
+# Random Forest FSCT
 open_example("RF_example")
+# Random Forest Leaf Wood Classification
+open_example("LW_example")
 ```
 <div align="center"> <img src="readme_img/features.png" width="500"> </div>
 
@@ -70,9 +73,15 @@ open_example("RF_example")
 
 Krisanski, S.; Taskhiri, M.S.; Gonzalez Aracil, S.; Herries, D.; Muneri, A.; Gurung, M.B.; Montgomery, J.; Turner, P. Forest Structural Complexity Tool—An Open Source, Fully-Automated Tool for Measuring Forest Point Clouds. Remote Sens. 2021, 13, 4677. https://doi.org/10.3390/rs13224677
 
-GitHub Repository: https://github.com/SKrisanski/FSCT
+Hackel, T.; Wegner J. D.; Schindler, K. Contour Detection in Unstructured 3D Point Clouds. Photogrammetry and Remote Sensing, ETH Zürich.
+
+Wang D, Momo Takoudjou S, Casella E. LeWoS: A universal leaf-wood classification method to facilitate the 3D modelling of large tropical trees using terrestrial LiDAR. Methods Ecol Evol. 2020; 11: 376–389. https://doi.org/10.1111/2041-210X.13342
+
+FSCT: https://github.com/SKrisanski/FSCT
 
 jakteristics : https://github.com/jakarto3d/jakteristics
+
+lidUrb:https://github.com/Blecigne/lidUrb
 
 ## License
 This project is licensed under the GPL-3.0 License - see the LICENSE file for details.

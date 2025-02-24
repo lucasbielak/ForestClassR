@@ -1,7 +1,7 @@
 # install.packages(c("remotes","caret","randomforest","lidR","data.table"))
 
 library(remotes)
-install_github("lucasbielak/ForestClassR",force=TRUE)
+install_github("lucasbielak/ForestClassR")
 library(lidR)
 library(ForestClassR)
 library(caret)
@@ -53,6 +53,17 @@ las_eigen@data$predicted <- predictions_all
 
 plot(las_eigen, color = "predicted", pal = custom_colors, bg = "darkgray")
 plot(las_eigen, color = "label", pal = custom_colors, bg = "darkgray")
+
+########
+feature_importance <- importance(model_rf)
+print(feature_importance)
+
+# model, var, class (0 = ground, 1 = leaf, 2 = CWD, 3 = wood)
+partialPlot(model_rf, trainData, 'planarity', 1,
+            plot = TRUE, add= False,
+            rug = TRUE, xlab='vst', ylab="",
+            main=paste("Partial Dependence on", 'Planarity')
+            )
 
 ### Test in other LAS
 
