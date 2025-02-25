@@ -1,5 +1,4 @@
 # Install required packages (Comment if already installed)
-#install.packages(c( "caret", "randomForest", "lidR", "data.table"))
 
 install.packages("remotes")
 library(remotes)    # Installing packages from GitHub
@@ -9,6 +8,7 @@ install_github("lucasbielak/lidUrb")      # Urban LiDAR processing
 install_github("lucasbielak/ForestClassR") # Forest classification
 
 # Load core libraries
+#install.packages(c( "caret", "randomForest", "lidR", "data.table"))
 library(lidR)       # LiDAR data processing
 library(caret)      # Classification and regression training
 library(randomForest) # Random forest modeling
@@ -18,8 +18,12 @@ library(data.table) # Efficient data manipulation
 library(reticulate)
 
 # Create virtual environment with jakteristics for geometric features
-reticulate::install_python("3.12")
-virtualenv_create("lidUrb", python = "3.12", packages="jakteristics", pip=TRUE)
+virtualenv_create("lidUrb", packages="jakteristics", pip=TRUE)
+
+#if not installed run
+# reticulate::install_python("3.12")
+# virtualenv_create("lidUrb", python = "3.12", packages="jakteristics", pip=TRUE)
+
 use_virtualenv("lidUrb", required = TRUE)
 
 # Load specialized packages
